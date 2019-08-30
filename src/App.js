@@ -1,26 +1,39 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
+import FriendsList from './FriendsList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// let friends = ['John', 'Sally', 'Ron'];
+
+export default class App extends Component {
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     friends: ['John', 'Sally', 'Ron'],
+  //     friendName: ''
+  //   };
+  // }
+
+  // updateFriendName(value) {
+  //   this.setState({ friendName: value });
+  // }
+
+  // addFriend() {
+  //   let { friends, friendName } = this.state;
+  //   let copy = friends.slice();
+  //   copy.push(friendName);
+  //   this.setState({ friends: copy, friendName: '' });
+  // }
+
+  render() {
+    return (
+      <div>
+        <Header />
+        <FriendsList />
+        {/* <FriendsList />
+        <FriendsList /> */}
+      </div>
+    );
+  }
 }
-
-export default App;
